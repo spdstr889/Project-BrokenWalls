@@ -13,9 +13,17 @@ public class BrokenWalls {
             checklist.add(item);
         }
     }
-    
+    static void printMenu(){
+        for (int i=0; i<checklist.size();i++){
+            int counter=i+1;
+            System.out.println("["+ counter +"]"+""+ checklist.get(i).description + (checklist.get(i).isComplete ? "[x]":"[ ]"));
+        }
+    }
     public static void main(String[] args){
         Scanner scanner=new Scanner(System.in);
+        setupChecklist();
+        printMenu();
+
     }
     
 }
